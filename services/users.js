@@ -25,8 +25,8 @@ const deleteUserInfo = async (_id) => {
   return await Users.deleteOne({_id}).lean();
 };
 
-const getUserInfo = async (nickName) => {
-  return await Users.findOne({nickName}).lean();
+const getUserInfo = async (nickName, email) => {
+  return await Users.findOne({nickName, email}).lean();
 }
 
 module.exports.createUser = createUser;

@@ -19,8 +19,9 @@ PATCH http://localhost:5000/users/update
 Content-Type: application/json
 
 {
-  "beforeNickName": "aa",
-  "afterNickName": "testtest"
+  "beforeNickName": "testtest",
+  "afterNickName": "gyu",
+  "email": "gee8195@naver.com"
 }
 
 #### 
@@ -29,5 +30,17 @@ DELETE http://localhost:5000/users/delete
 Content-Type: application/json
 
 {
-  "nickName": "gyu1"
+  "nickName": "test",
+  "email": "gee8195@naver.com"
+}
+
+#### 
+# 로그인 시도 (jwt)
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+  "nickName": "gyu",
+  "email": "gee8195@naver.com",
+  "password": "1234"
 }

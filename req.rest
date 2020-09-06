@@ -1,0 +1,33 @@
+####
+# 회원가입 (CREATE) 
+POST http://localhost:5000/users/signup
+Content-Type: application/json
+
+{
+  "nickName": "aa",
+  "email": "gee8195@naver.com",
+  "password": "1234"
+}
+
+#### 
+# 회원정보 조회 (READ)
+GET http://localhost:5000/users/read
+
+####
+# 회원정보 수정 (UPDATE)
+PATCH http://localhost:5000/users/update
+Content-Type: application/json
+
+{
+  "beforeNickName": "aa",
+  "afterNickName": "testtest"
+}
+
+#### 
+# 회원 탈퇴 (DELETE)
+DELETE http://localhost:5000/users/delete
+Content-Type: application/json
+
+{
+  "nickName": "gyu1"
+}

@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const passwdHashing = require('../middleware/encrypt')
+const passwordHashing = require('../middleware/encrypt')
 const userController = require('../controllers/users');
 
 router.post(
   '/signup',
-  passwdHashing.changePasword,
+  passwordHashing.changePassword,
   userController.signUp,
 );
 

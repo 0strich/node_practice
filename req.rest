@@ -4,7 +4,7 @@ POST http://localhost:5000/users/signup
 Content-Type: application/json
 
 {
-  "nickName": "aa",
+  "nickName": "gyu",
   "email": "gee8195@naver.com",
   "password": "1234"
 }
@@ -19,7 +19,7 @@ PATCH http://localhost:5000/users/update
 Content-Type: application/json
 
 {
-  "beforeNickName": "testtest",
+  "beforeNickName": "hogu",
   "afterNickName": "gyu",
   "email": "gee8195@naver.com"
 }
@@ -30,7 +30,7 @@ DELETE http://localhost:5000/users/delete
 Content-Type: application/json
 
 {
-  "nickName": "test",
+  "nickName": "aa",
   "email": "gee8195@naver.com"
 }
 
@@ -40,7 +40,7 @@ POST http://localhost:5000/users/login
 Content-Type: application/json
 
 {
-  "nickName": "gyu",
+  "nickName": "aa",
   "email": "gee8195@naver.com",
   "password": "1234"
 }

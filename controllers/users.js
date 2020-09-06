@@ -13,7 +13,7 @@ const signUp = async (req, res) => {
 
     cwr.createWebResp(res, 200, userData);
   } catch (err) {
-    cwr.errorWebResp(res, 403, '회원가입 실패', error);
+    cwr.errorWebResp(res, 403, '회원가입 실패', err);
   }
 };
 
@@ -23,7 +23,7 @@ const usersInfo = async (req, res) => {
     const data = await userService.getAllUsersInfo()
     cwr.createWebResp(res, 200, data);
   } catch (err) {
-    cwr.errorWebResp(res, 403, '회원정보 조회 실패', error);
+    cwr.errorWebResp(res, 403, '회원정보 조회 실패', err);
   }
 };
 
@@ -41,7 +41,7 @@ const changeNickName = async (req, res) => {
 
     cwr.createWebResp(res, 200, updateData);
   } catch (err) {
-    cwr.errorWebResp(res, 403, '회원정보 수정 실패', error);
+    cwr.errorWebResp(res, 403, '회원정보 수정 실패', err);
   }
 };
 
@@ -54,7 +54,7 @@ const deleteUser = async (req, res) => {
     const deleteData = await userService.deleteUserInfo(_id);
     cwr.createWebResp(res, 200, deleteData);
   } catch (err) {
-    cwr.errorWebResp(res, 403, '회원 탈퇴 실패', error);
+    cwr.errorWebResp(res, 403, '회원 탈퇴 실패', err);
   }
 };
 
@@ -72,13 +72,13 @@ const tryLogin = async (req, res) => {
         
         cwr.createWebResp(res, 200, {jwtToken});
       } else {
-        cwr.errorWebResp(res, 403, '패스워드가 일치하지 않습니다', error);
+        cwr.errorWebResp(res, 403, '패스워드가 일치하지 않습니다', err);
       }
     } else {
-      cwr.errorWebResp(res, 404, '회원정보가 존재하지 않습니다', error);
+      cwr.errorWebResp(res, 404, '회원정보가 존재하지 않습니다', err);
     }
   } catch (err) {
-    cwr.errorWebResp(res, 403, '로그인 실패', error);
+    cwr.errorWebResp(res, 403, '로그인 실패', err);
   }
 };
 
